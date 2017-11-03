@@ -13,9 +13,7 @@ const styles = {
 class App extends Component {
   render() {
     return (
-      <Header>
-        <div style={styles.app}>Welcome to React!</div>
-      </Header>
+      <div style={styles.app}>Welcome to React!</div>
     );
   }
 }
