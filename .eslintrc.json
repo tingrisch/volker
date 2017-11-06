@@ -1,3 +1,6 @@
 {
-    "extends": "google"
+  "extends": "airbnb",
+  "rules": {
+    "linebreak-style": 0
+  }
 }
