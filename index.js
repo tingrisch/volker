@@ -1,19 +1,12 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-import Header from "./components/Header";
-
-const styles = {
-  app: {
-    paddingTop: 40,
-    textAlign: "center"
-  }
-};
+import Header from "./app/components/header/Header";
 
 class App extends Component {
   render() {
     return (
-      <div style={styles.app}>Welcome to React!</div>
+      <div>Welcome to React!</div>
     );
   }
 }
