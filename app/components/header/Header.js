@@ -4,14 +4,13 @@ import styled from 'styled-components';
 import PageLogo from './PageLogo';
 
 const Wrapper = styled.div`
-  background: #cafbed;
   width: 100%;
   display: flex;
 `;
 
 const Placeholder = styled.div`
   width: 178px;
-  background-color: transparent;
+  background-color: ${props => props.theme.dark};
 `;
 
 const StyledHeader = styled.div`
@@ -25,7 +24,7 @@ const StyledHeader = styled.div`
 
 const PageClaim = styled.div`
   display: flex;
-  font-size: 18px;
+  font-size: ${props => props.theme.xtraLarge};
   line-height: 20px;
   margin-top: 34px;
 `;
@@ -33,7 +32,7 @@ const PageClaim = styled.div`
 const Dot = styled.div`
   width: 4px;
   height: 4px;
-  background: #222;
+  background: ${props => props.theme.dark};
   border-radius: 50%;
   margin: 9px;
 `;

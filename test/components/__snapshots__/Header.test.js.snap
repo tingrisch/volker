@@ -1,7 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> renders 1`] = `
-<styled.div>
-  Das ist mein Header
-</styled.div>
+<header>
+  <styled.div>
+    <styled.div />
+    <styled.div>
+      <PageLogo />
+      <styled.div>
+        sehen 
+        <styled.div />
+         verstehen 
+        <styled.div />
+         annehmen
+      </styled.div>
+    </styled.div>
+  </styled.div>
+</header>
 `;

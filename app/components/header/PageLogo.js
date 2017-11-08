@@ -4,15 +4,17 @@ import styled from 'styled-components';
 import H1 from '../ui/headline/H1';
 import Link from '../ui/link/Link';
 
-const Logo = styled.div``;
+const Logo = styled.div`
+  margin-left: 16px;
+`;
 
 const Claim = styled.span`
-  font-size: 16px;
+  font-size: ${props => props.theme.large};
   font-style: italic;
 `;
 
 const StyledLink = styled(Link)`
-  color: #222;
+  color: ${props => props.theme.dark};
 `;
 
 const PageLogo = () => {

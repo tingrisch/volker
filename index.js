@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styled, { injectGlobal } from 'styled-components';
+import styled, { injectGlobal, ThemeProvider } from 'styled-components';
 
 import Header from './app/components/header/Header';
 // import Sidebar from './app/components/sidebar/Sidebar';
 // import Main from './app/components/main/Main';
+import Theme from './app/styles/Theme';
 
 const Wrapper = styled.div`
   background: #1b55de;
@@ -14,11 +15,12 @@ const Wrapper = styled.div`
 
 const App = () => {
   return (
-    <Wrapper>
-      <Header />
-    </Wrapper>
+    <ThemeProvider theme={Theme}>
+      <Wrapper>
+        <Header />
+      </Wrapper>
+    </ThemeProvider>
   );
-
 };
 
 // Global style
