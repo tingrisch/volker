@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import styled, { injectGlobal, ThemeProvider } from 'styled-components';
 
 import Header from './app/components/header/Header';
-// import Sidebar from './app/components/sidebar/Sidebar';
+import Sidebar from './app/components/sidebar/Sidebar';
 // import Main from './app/components/main/Main';
 import Theme from './app/styles/Theme';
 
@@ -18,6 +18,7 @@ const App = () => {
     <ThemeProvider theme={Theme}>
       <Wrapper>
         <Header />
+        <Sidebar />
       </Wrapper>
     </ThemeProvider>
   );
