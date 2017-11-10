@@ -28,19 +28,23 @@ const MenuLink = styled.a`
   }
 `;
 
+const MenuElementWithChildren = styled.li`
+  
+`;
+
 // https://codepen.io/joslex/pen/adeJeV
 
 const Navigation = () => {
   return (
     <div>
-      <MainNavigation
+      <MainNavigation>
         <Menu>
           <MenuElement>
             <MenuLink>Über mich</MenuLink>
           </MenuElement>
-          <MenuElement>
+          <MenuElementWithChildren>
             <MenuLink>Produkte</MenuLink>
-          </MenuElement>
+          </MenuElementWithChildren>
           <MenuElement>
             <MenuLink>Cooles Zeug</MenuLink>
           </MenuElement>
