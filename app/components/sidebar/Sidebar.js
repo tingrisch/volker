@@ -17,7 +17,9 @@ const Wrapper = styled.div`
 
 const Sidebar = () => {
   return (
-    <Navigation />
+    <Wrapper>
+      <Navigation />
+    </Wrapper>
   )
 };
 

@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import ExpandSvg from 'genericons-neue-react/icons/expand';
 
-const MainNavigation = styled.nav``;
+const MainNavigation = styled.nav`
+  background-color: rgba(233, 128, 37, 0.3);
+`;
 
 const Menu = styled.ul`
   margin: 0;
@@ -13,6 +16,7 @@ const Menu = styled.ul`
 const MenuElement = styled.li`
   display: block;
   list-style-type: none;
+  border-bottom: 1px solid #CB6206;
 
   &:hover > ul {
     display: block;
@@ -36,31 +40,45 @@ const MenuLink = styled.a`
   display: flex;
   text-align: center;
   text-decoration: none;
-  color: #777;
+  color: #ffffff;
   padding: 1rem;
+  white-space: nowrap;
 
   &:hover {
-    background: #777;
+    background-color:rgba(203, 98, 6, 0.9);
     color: #fff;
   }
 `;
 
-const MenuElementSub = styled.li`
-  a:after {
-    font-family: 'Genericons';
-    content: '\f431';
-    padding: 1px;
+const SubMenu = styled.ul`
+  display: none;
+  background-color:rgba(203, 98, 6, 0.9);
+`;
+
+const MenuItemHasChildren = styled.li`
+  list-style-type: none;
+  border-bottom: 1px solid #CB6206;
+  max-height: 50px;
+
+  &:hover > ul {
+    display: block;
+    color: #fff;
+    padding-left: 5rem;
+  }
+
+  &:hover {
+    display: flex;
+    background-color: rgba(203, 98, 6, 0.9);
   }
 `;
 
-const MenuSub = styled.ul`
-  display: none;
+const SubMenuElement = styled.li`
+  list-style-type: none;
+  background-color:rgba(203, 98, 6, 0.9);
 
-  @media (min-width: 800px) {
-    nav ul ul {
-      display: none;
-      position: absolute;
-    }
+  &:hover, & a:hover{
+    background-color: #ffffff;
+    color: rgba(203, 98, 6, 1);
   }
 `;
 
@@ -69,14 +87,28 @@ const MenuSub = styled.ul`
 const Navigation = () => {
   return (
     <div>
+      <div>
+        <ExpandSvg fill="#ffffff" />
+      </div>
       <MainNavigation>
         <Menu>
           <MenuElement>
             <MenuLink>Über mich</MenuLink>
           </MenuElement>
-          <MenuLink>
+          <MenuItemHasChildren>
             <MenuLink>Produkte</MenuLink>
-          </MenuLink>
+            <SubMenu>
+              <SubMenuElement>
+                <MenuLink>Produkt 1</MenuLink>
+              </SubMenuElement>
+              <SubMenuElement>
+                <MenuLink>Produkt 2</MenuLink>
+              </SubMenuElement>
+              <SubMenuElement>
+                <MenuLink>Produkt 3</MenuLink>
+              </SubMenuElement>
+            </SubMenu>
+          </MenuItemHasChildren>
           <MenuElement>
             <MenuLink>Cooles Zeug</MenuLink>
           </MenuElement>
