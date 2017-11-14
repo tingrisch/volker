@@ -11,7 +11,7 @@ const Wrapper = styled.div`
     rgba(255, 159, 76, 0.9) 65%,
     rgba(255, 218, 186, 0.95) 100%
   );
-  width: 178px;
+  width: 188px;
   height: 600px;
 `;
 

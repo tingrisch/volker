@@ -23,22 +23,11 @@ const MenuElement = styled.li`
     color: #fff;
     padding-left: 2rem;
   }
-
-  @media (min-width: 800px) {
-    &:hover > ul {
-      padding-left: 0;
-      background: #777;
-    }
-
-    &:hover > ul a {
-      color: #fff;
-    }
-  }
 `;
 
 const MenuLink = styled.a`
   display: flex;
-  text-align: center;
+  justify-content: space-between;
   text-decoration: none;
   color: #ffffff;
   padding: 1rem;
@@ -50,25 +39,30 @@ const MenuLink = styled.a`
   }
 `;
 
-const SubMenu = styled.ul`
-  display: none;
-  background-color:rgba(203, 98, 6, 0.9);
-`;
-
 const MenuItemHasChildren = styled.li`
   list-style-type: none;
   border-bottom: 1px solid #CB6206;
   max-height: 50px;
+  background: green;
 
   &:hover > ul {
+    background: red;
     display: block;
     color: #fff;
-    padding-left: 5rem;
   }
 
   &:hover {
     display: flex;
+    justify-content: space-between;
     background-color: rgba(203, 98, 6, 0.9);
+  }
+
+  &:hover a div {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 `;
 
@@ -82,36 +76,84 @@ const SubMenuElement = styled.li`
   }
 `;
 
+const SubMenu = styled.ul`
+  display: none;
+  background-color:rgba(203, 98, 6, 0.9);
+`;
+
+const SvgWrapper = styled.div`
+  width: 16px;
+  height: 16px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+`;
+
 // https://codepen.io/joslex/pen/adeJeV
 
 const Navigation = () => {
   return (
     <div>
-      <div>
-        <ExpandSvg fill="#ffffff" />
-      </div>
       <MainNavigation>
         <Menu>
           <MenuElement>
-            <MenuLink>Über mich</MenuLink>
+            <MenuLink>&Uuml;ber mich</MenuLink>
           </MenuElement>
           <MenuItemHasChildren>
-            <MenuLink>Produkte</MenuLink>
+            <MenuLink>
+              Angebote
+              <SvgWrapper>
+                <ExpandSvg fill="#ffffff" />
+              </SvgWrapper>
+            </MenuLink>
             <SubMenu>
               <SubMenuElement>
-                <MenuLink>Produkt 1</MenuLink>
+                <MenuLink>Vortr&auml;ge und Beratungen</MenuLink>
               </SubMenuElement>
               <SubMenuElement>
-                <MenuLink>Produkt 2</MenuLink>
+                <MenuLink>Zeichnen und Interpretation Ihres individuellen Seelenbaums</MenuLink>
               </SubMenuElement>
               <SubMenuElement>
-                <MenuLink>Produkt 3</MenuLink>
+                <MenuLink>Gesch&uuml;tzte Kontakte zu Verstorbenen</MenuLink>
+              </SubMenuElement>
+              <SubMenuElement>
+                <MenuLink>Mediale R&uuml;ckf&uuml;hrungen und Aufstellungen</MenuLink>
+              </SubMenuElement>
+              <SubMenuElement>
+                <MenuLink>Kostenloser Anrufservice für die Schweiz</MenuLink>
               </SubMenuElement>
             </SubMenu>
           </MenuItemHasChildren>
-          <MenuElement>
-            <MenuLink>Cooles Zeug</MenuLink>
-          </MenuElement>
+          <MenuItemHasChildren>
+            <MenuLink>
+              Ver&ouml;ffentlichungen
+              <SvgWrapper>
+                <ExpandSvg fill="#ffffff" />
+              </SvgWrapper>
+            </MenuLink>
+            <SubMenu>
+              <SubMenuElement>
+                <MenuLink>Isabella's Gotteskinder der Natur</MenuLink>
+              </SubMenuElement>
+              <SubMenuElement>
+                <MenuLink>Wenn Schmetterlinge tanzen gehen</MenuLink>
+              </SubMenuElement>
+              <SubMenuElement>
+                <MenuLink>Du glaubst zu wissen</MenuLink>
+              </SubMenuElement>
+              <SubMenuElement>
+                <MenuLink>Thao - Der weiße Adler</MenuLink>
+              </SubMenuElement>
+              <SubMenuElement>
+                <MenuLink>Der Seelenbaum</MenuLink>
+              </SubMenuElement>
+              <SubMenuElement>
+                <MenuLink>Audio-CD: Wege zu dir selbst</MenuLink>
+              </SubMenuElement>
+            </SubMenu>
+          </MenuItemHasChildren>
         </Menu>
       </MainNavigation>
     </div>
