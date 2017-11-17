@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navigation /> renders 1`] = `
+<div>
+  <styled.nav>
+    <styled.ul>
+      <styled.li>
+        <styled.a>
+          Über mich
+        </styled.a>
+      </styled.li>
+      <styled.li>
+        <styled.a>
+          Angebote
+          <styled.div>
+            <Expand
+              fill="#ffffff"
+            />
+          </styled.div>
+        </styled.a>
+        <styled.ul>
+          <styled.li>
+            <styled.a>
+              Vorträge und Beratungen
+            </styled.a>
+          </styled.li>
+          <styled.li>
+            <styled.a>
+              Zeichnen und Interpretation Ihres individuellen Seelenbaums
+            </styled.a>
+          </styled.li>
+          <styled.li>
+            <styled.a>
+              Geschützte Kontakte zu Verstorbenen
+            </styled.a>
+          </styled.li>
+          <styled.li>
+            <styled.a>
+              Mediale Rückführungen und Aufstellungen
+            </styled.a>
+          </styled.li>
+          <styled.li>
+            <styled.a>
+              Kostenloser Anrufservice für die Schweiz
+            </styled.a>
+          </styled.li>
+        </styled.ul>
+      </styled.li>
+      <styled.li>
+        <styled.a>
+          Veröffentlichungen
+          <styled.div>
+            <Expand
+              fill="#ffffff"
+            />
+          </styled.div>
+        </styled.a>
+        <styled.ul>
+          <styled.li>
+            <styled.a>
+              Isabella's Gotteskinder der Natur
+            </styled.a>
+          </styled.li>
+          <styled.li>
+            <styled.a>
+              Wenn Schmetterlinge tanzen gehen
+            </styled.a>
+          </styled.li>
+          <styled.li>
+            <styled.a>
+              Du glaubst zu wissen
+            </styled.a>
+          </styled.li>
+          <styled.li>
+            <styled.a>
+              Thao - Der weiße Adler
+            </styled.a>
+          </styled.li>
+          <styled.li>
+            <styled.a>
+              Der Seelenbaum
+            </styled.a>
+          </styled.li>
+          <styled.li>
+            <styled.a>
+              Audio-CD: Wege zu dir selbst
+            </styled.a>
+          </styled.li>
+        </styled.ul>
+      </styled.li>
+      <styled.li>
+        <styled.a>
+          Kontakt
+        </styled.a>
+      </styled.li>
+    </styled.ul>
+  </styled.nav>
+</div>
+`;

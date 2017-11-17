@@ -18,8 +18,13 @@ const StyledHeader = styled.div`
   justify-content: space-between;
   width: 762px;
   padding: 10px;
-  background: linear-gradient(to right, rgba(255,218,186,0.8) 0%,rgba(255,159,76,0.9) 65%,rgba(255,218,186,0.95) 100%);
-  box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.45);
+  background: linear-gradient(
+    to right,
+    rgba(255, 218, 186, 0.8) 0%,
+    rgba(255, 159, 76, 0.9) 65%,
+    rgba(255, 218, 186, 0.95) 100%
+  );
+  box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25);
 `;
 
 const PageClaim = styled.div`

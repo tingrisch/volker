@@ -2,7 +2,7 @@ module.exports = options => {
   return {
     entry: './index.js',
     output: {
-      filename: 'bundle.js',
+      filename: 'bundle.js'
     },
     module: {
       rules: [
@@ -13,12 +13,12 @@ module.exports = options => {
             {
               loader: 'babel-loader',
               options: {
-                cacheDirectory: true,
-              },
-            },
-          ],
-        },
-      ],
-    },
-  }
-}
+                cacheDirectory: true
+              }
+            }
+          ]
+        }
+      ]
+    }
+  };
+};

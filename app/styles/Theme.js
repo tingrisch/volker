@@ -17,6 +17,9 @@ const Theme = {
   ...fontSizes,
   menu: {
     border: '#CB6206'
+  },
+  home: {
+    background: '#1b55de'
   }
 };
 
