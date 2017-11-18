@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ExpandSvg from 'genericons-neue-react/icons/expand';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const MainNavigation = styled.nav`
   background-color: rgba(233, 128, 37, 0.3);
@@ -24,17 +24,18 @@ const MenuElement = styled.li`
     color: ${props => props.theme.white};
     padding-left: 2rem;
   }
-`;
 
-const MenuLink = styled.a`
-  display: flex;
-  justify-content: space-between;
-  text-decoration: none;
-  color: ${props => props.theme.white};
-  padding: 1rem 0.5rem 1rem 1rem;
-  white-space: nowrap;
+  /* for the nav links */
+  & a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: ${props => props.theme.white};
+    padding: 1rem 0.5rem 1rem 1rem;
+    white-space: nowrap;
+  }
 
-  &:hover {
+  & a:hover {
     background-color: rgba(203, 98, 6, 0.9);
     color: ${props => props.theme.white};
     transition: background 0.3s ease-out; /* explorer 10 */
@@ -71,6 +72,25 @@ const MenuItemHasChildren = styled.li`
     -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
+  }
+
+  /* for the nav links */
+  & a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: ${props => props.theme.white};
+    padding: 1rem 0.5rem 1rem 1rem;
+    white-space: nowrap;
+  }
+
+  & a:hover {
+    background-color: rgba(203, 98, 6, 0.9);
+    color: ${props => props.theme.white};
+    transition: background 0.3s ease-out; /* explorer 10 */
+    -webkit-transition: background 0.3s ease-out; /* chrome & safari */
+    -moz-transition: background 0.3 ease-out; /* firefox */
+    -o-transition: background 0.3 ease-out; /* opera */
   }
 `;
 
@@ -113,68 +133,83 @@ const Navigation = () => {
       <MainNavigation>
         <Menu>
           <MenuElement>
-            <MenuLink>dsfsdf</MenuLink>
-            <NavLink to="/about/">&Uuml;ber mich</NavLink>
+            <NavLink to="/ueber-mich/">&Uuml;ber mich</NavLink>
           </MenuElement>
           <MenuItemHasChildren>
-            <MenuLink>
+            <NavLink to="#">
               Angebote
               <SvgWrapper>
                 <ExpandSvg fill="#ffffff" />
               </SvgWrapper>
-            </MenuLink>
+            </NavLink>
             <SubMenu>
               <SubMenuElement>
-                <MenuLink>Vortr&auml;ge und Beratungen</MenuLink>
+                <NavLink to="/vortraege-und-beratungen/">
+                  Vortr&auml;ge und Beratungen
+                </NavLink>
               </SubMenuElement>
               <SubMenuElement>
-                <MenuLink>
+                <NavLink to="/zeichnen-und-interpretieren-ihres-seelenbaums/">
                   Zeichnen und Interpretation Ihres individuellen Seelenbaums
-                </MenuLink>
+                </NavLink>
               </SubMenuElement>
               <SubMenuElement>
-                <MenuLink>Gesch&uuml;tzte Kontakte zu Verstorbenen</MenuLink>
+                <NavLink to="/kontakte-zu-verstorbenen/">
+                  Gesch&uuml;tzte Kontakte zu Verstorbenen
+                </NavLink>
               </SubMenuElement>
               <SubMenuElement>
-                <MenuLink>
+                <NavLink to="/mediale-rueckfuehrungen-und-aufstellungen/">
                   Mediale R&uuml;ckf&uuml;hrungen und Aufstellungen
-                </MenuLink>
+                </NavLink>
               </SubMenuElement>
               <SubMenuElement>
-                <MenuLink>Kostenloser Anrufservice für die Schweiz</MenuLink>
+                <NavLink to="/anrufservice/">
+                  Kostenloser Anrufservice für die Schweiz
+                </NavLink>
               </SubMenuElement>
             </SubMenu>
           </MenuItemHasChildren>
           <MenuItemHasChildren>
-            <MenuLink>
+            <NavLink to="#">
               Ver&ouml;ffentlichungen
               <SvgWrapper>
                 <ExpandSvg fill="#ffffff" />
               </SvgWrapper>
-            </MenuLink>
+            </NavLink>
             <SubMenu>
               <SubMenuElement>
-                <MenuLink>Isabella's Gotteskinder der Natur</MenuLink>
+                <NavLink to="/buch-isabellas-gotteskinder-der-natur/">
+                  Isabella's Gotteskinder der Natur
+                </NavLink>
               </SubMenuElement>
               <SubMenuElement>
-                <MenuLink>Wenn Schmetterlinge tanzen gehen</MenuLink>
+                <NavLink to="/buch-wenn-schmetterlinge-tanzen-gehen/">
+                  Wenn Schmetterlinge tanzen gehen
+                </NavLink>
               </SubMenuElement>
               <SubMenuElement>
-                <MenuLink>Du glaubst zu wissen</MenuLink>
+                <NavLink to="/buch-du-glaubst-zu-wissen/">
+                  Du glaubst zu wissen
+                </NavLink>
               </SubMenuElement>
               <SubMenuElement>
-                <MenuLink>Thao - Der weiße Adler</MenuLink>
+                <NavLink to="/buch-thao-der-weisse-adler/">
+                  Thao - Der weiße Adler
+                </NavLink>
               </SubMenuElement>
               <SubMenuElement>
-                <MenuLink>Der Seelenbaum</MenuLink>
+                <NavLink to="/buch-seelenbaum/">Der Seelenbaum</NavLink>
               </SubMenuElement>
               <SubMenuElement>
-                <MenuLink>Audio-CD: Wege zu dir selbst</MenuLink>
+                <NavLink to="/cd-wege-zu-dir-selbst/">
+                  Audio-CD: Wege zu dir selbst
+                </NavLink>
               </SubMenuElement>
             </SubMenu>
           </MenuItemHasChildren>
           <MenuElement>
-            <MenuLink>Kontakt</MenuLink>
+            <NavLink to="/kontakt/">Kontakt</NavLink>
           </MenuElement>
         </Menu>
       </MainNavigation>

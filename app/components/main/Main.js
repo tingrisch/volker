@@ -13,11 +13,16 @@ const About = () => {
   return <div>Über mich</div>;
 };
 
+const Contact = () => {
+  return <div>Kontakt</div>;
+};
+
 const Main = () => {
   return (
     <Wrapper>
       Test dskfj sdjfskdl jflsdf
-      <Route path="/about/" component={About} />
+      <Route path="/ueber-mich/" component={About} />
+      <Route path="/kontakt/" component={Contact} />
     </Wrapper>
   );
 };
