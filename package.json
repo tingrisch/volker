@@ -15,7 +15,7 @@
     ]
   },
   "scripts": {
-    "dev": "webpack-dev-server --env.dev",
+    "dev": "webpack-dev-server --env.dev --history-api-fallback",
     "build": "webpack",
     "test": "jest"
   },
