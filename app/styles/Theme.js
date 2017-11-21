@@ -1,6 +1,7 @@
 const colors = {
   transparent: 'transparent',
   dark: '#222222',
+  headline: '#9b4800',
   white: '#ffffff'
 };
 
