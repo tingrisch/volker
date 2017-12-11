@@ -21,6 +21,9 @@ const Theme = {
   },
   home: {
     background: '#1b55de'
+  },
+  images: {
+    boxShadow: '#999'
   }
 };
 
